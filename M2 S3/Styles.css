@@ -1,0 +1,388 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y fuente general */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: #fff;
+    padding: 32px 0 16px 0;
+    text-align: center;
+    margin-bottom: 32px;
+    border-radius: 0 0 16px 16px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Secciones principales */
+main section {
+    background: #fff;
+    margin: 24px auto;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+main h2 {
+    color: #00bcd4;
+    margin-bottom: 12px;
+}
+
+main ul {
+    margin-left: 24px;
+    margin-bottom: 12px;
+}
+
+main img {
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+/* Tabla de proyectos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #00bcd4;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f1f1f1;
+}
+
+/* Formulario de contacto */
+form {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #0097a7;
+}
+
+/* Redes sociales */
+#contacto h3 {
+    margin-top: 24px;
+}
+
+#contacto a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 8px;
+    transition: color 0.2s;
+}
+
+#contacto a:hover {
+    color: #0097a7;
+}
+
+/* Presentación */
+.presentacion {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.presentacion-info {
+    flex: 1 1 250px;
+    min-width: 250px;
+}
+
+.presentacion-img {
+    flex-shrink: 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 0;
+}
+
+/* Mosaico Presentación */
+.presentacion-mosaico {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    align-items: start;
+    background: #f9fafb;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 32px;
+}
+
+.perfil-mosaico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.redes-mosaico {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.redes-mosaico a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 6px;
+    transition: color 0.2s;
+}
+
+.redes-mosaico a:hover {
+    color: #0097a7;
+}
+
+/* Habilidades */
+.habilidades-junto {
+    margin-top: 24px;
+}
+
+.habilidades-junto h2 {
+    color: #00bcd4;
+    margin-bottom: 8px;
+}
+
+.habilidades-junto ul {
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    /* Header más compacto */
+    header {
+        padding: 20px 0 12px 0;
+        margin-bottom: 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    /* Navegación stack vertical en móviles */
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    /* Layout mosaico optimizado para móviles */
+    .presentacion-mosaico {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 24px;
+    }
+    
+    /* Perfil arriba, centrado y con buen tamaño */
+    .perfil-mosaico {
+        order: 1;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    .perfil-mosaico img {
+        width: 160px !important;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    /* Información abajo */
+    .presentacion-info {
+        order: 2;
+        text-align: left;
+    }
+    
+    /* Secciones más compactas */
+    main section {
+        margin: 16px auto;
+        padding: 16px;
+    }
+    
+    /* Imágenes responsivas */
+    main img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Tabla scrollable horizontal */
+    table {
+        font-size: 0.9rem;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th, td {
+        padding: 8px;
+        min-width: 120px;
+    }
+    
+    /* Formulario más compacto */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 10px;
+        font-size: 16px; /* Previene zoom en iOS */
+    }
+    
+    button[type="submit"] {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Proyectos con imágenes apiladas */
+    .proyectos-imgs {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    
+    /* Contenedor de imágenes responsive */
+    div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: center;
+    }
+    
+    /* Imágenes de proyectos más pequeñas en móvil */
+    section img[width="250"] {
+        width: 100% !important;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header responsive */
+    header {
+        padding: 24px 10px 16px 10px;
+    }
+    
+    /* Espaciado general optimizado */
+    body {
+        padding: 0 8px;
+    }
+    
+    /* Cambiar el orden del grid - perfil arriba en móviles */
+    .presentacion-mosaico {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    
+    /* Perfil va primero (arriba) */
+    .perfil-mosaico {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    
+    /* Información va segundo (abajo) */
+    .presentacion-info {
+        order: 2;
+    }
+    
+    /* Mantener tamaño de imagen adecuado */
+    .perfil-mosaico img {
+        width: 180px !important;
+        height: auto;
+    }
+    
+    /* Mejorar espaciado en redes sociales */
+    .redes-mosaico {
+        margin-top: 16px;
+    }
+    
+    .redes-mosaico h3 {
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Mejoras específicas para tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    main section {
+        max-width: 90%;
+    }
+    
+    .presentacion-mosaico {
+        padding: 24px;
+    }
+}
